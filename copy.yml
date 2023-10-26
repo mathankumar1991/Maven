@@ -9,4 +9,4 @@
   - name: Copy file from machine1 to machine2
     copy:
      src: webapp/src/main/webapp/index.jsp
-     dest: /tmp/mathan
+     dest: /tmp/
