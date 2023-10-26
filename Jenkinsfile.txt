@@ -1,5 +1,8 @@
 node(){
-	
+	stage('Prepare') {
+      steps {
+        sh 'mkdir -p target'
+      }
 	stage('Code Checkout'){
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/mathankumar1991/Maven.git']]])		
 	}
