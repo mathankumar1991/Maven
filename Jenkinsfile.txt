@@ -10,11 +10,7 @@ node(){
 			ls -lart target
 		"""
 	}
-	//tools {
-   // maven 'Maven' // Replace with the name you defined in Global Tool Configuration
-//}
-//sh 'mvn clean install'
-stage('Code Deployment'){
+	stage('Code Deployment'){
 		deploy adapters: [tomcat9(credentialsId: 'TomcatCreds', path: '', url: 'http://192.168.1.14:8088/')], contextPath: 'webapp', onFailure: false, war: '/webapps/*.war'
 	}	
 	
