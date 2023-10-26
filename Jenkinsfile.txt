@@ -6,7 +6,6 @@ node(){
 		sh """
 			ls -lart
 			mvn clean install
-			//ls -lart target
 		"""
 	}
 	stage('Code Deployment'){
